@@ -1,0 +1,140 @@
+select TMP_ALL.stub_type, 
+	   to_char(TMP_ALL.post_date, 'yyyy') as ccPostDateYear,
+	   to_char(TMP_ALL.post_date, 'mm') as ccPostDateMth,
+       sum(nvl(TMP_ALL.cc_cash_cnt,0)) as cc_cash_cnt,
+       sum(nvl(TMP_ALL.cc_eps_cnt,0)) as cc_eps_cnt,
+       sum(nvl(TMP_ALL.cc_chq_cnt,0)) as cc_chq_cnt,
+       sum(nvl(TMP_ALL.cc_co_cnt,0)) as cc_co_cnt,
+       sum(nvl(TMP_ALL.cc_mix_cnt,0)) as cc_mix_cnt
+from
+(
+select TMP.post_date,
+       TMP.cc_offCode as cc_offCode, TMP.stub_type,
+       sum(decode(TMP.cc_paymethcode, 'CA', 1, 'PIS', 1, 0)) as cc_cash_cnt,
+       sum(decode(TMP.cc_paymethcode, 'CHQ', 1, 0)) as cc_chq_cnt,
+       sum(decode(TMP.cc_paymethcode, 'MIX', 1, 0)) as cc_mix_cnt,
+       sum(decode(TMP.cc_paymethcode, 'EP', 1, 'TV', 1, 0)) as cc_eps_cnt,
+       sum(decode(TMP.cc_paymethcode, 'CO', 1, 0)) as cc_co_cnt
+from
+(
+ select distinct 
+		IPSS_POOL.activity_no as cc_activityNo, 
+		IPSS_POOL.tran_no as cc_tranNo, 
+		IPSS_POOL.merh_code as cc_merhCode, 
+		IPSS_POOL.off_code as cc_offCode, 
+		IPSS_POOL.pay_amt as cc_payAmt, 
+		case when IPSS_POOL.merh_code = '05' 
+			then 
+				case when count(distinct IPSS_POOL.pay_method_code)>1 
+					then 'MIX' 
+					else regexp_replace( LISTAGG(IPSS_POOL.pay_method_code, ',') WITHIN GROUP (ORDER BY IPSS_POOL.tran_no)  ,'([^,]+)(,\1)+', '\1') 
+				end 
+			else 
+				case when count(distinct IPSS_POOL.pay_method_code)>1 
+					then 'MIX' 
+					else regexp_replace( LISTAGG(IPSS_POOL.pay_method_code, ',') WITHIN GROUP (ORDER BY IPSS_POOL.activity_no)  ,'([^,]+)(,\1)+', '\1') 
+				end 
+		end as cc_paymethcode	,
+		IPSS_POOL.stub_type,
+		IPSS_POOL.post_date
+	from ( 
+		select TMP_ACT.activity_no, TMP_ACT.tran_no, 
+			TMP_ACT.bill_id, TMP_ACT.merh_code, TMP_ACT.bill_type, TMP_ACT.sub_crc,
+			TMP_ACT.post_date, TMP_ACT.off_code, 
+			TMP_ACT.ac_no, TMP_ACT.bill_seq, TMP_ACT.bill_amt, TMP_ACT.pay_amt, 
+			TMP_ACT.cre_dttm, 
+			TMP_ACT.pay_method_code, 
+			TMP_ACT.amt, 
+			sum( case when TMP_ACT.pay_method_code='CA' or TMP_ACT.pay_method_code='EP' then TMP_ACT.amt else 0 end) over (partition by TMP_ACT.activity_no ORDER BY TMP_ACT.cc_piority, TMP_ACT.amt ROWS UNBOUNDED PRECEDING) as cc_accumulateAmt
+			,
+/* comment it (this part is for HKSARG bill, not using in merchant- WTT				
+			case when TMP_ACT.merh_code = '05' and TMP_ACT.bill_type = 101 then 'RVD'
+				 when TMP_ACT.merh_code = '05' and TMP_ACT.bill_type = 131 then 'WSD'
+				 when TMP_ACT.merh_code = '05' then 'OTH'
+				 else TMP_ACT.merh_code
+			end as stub_type
+-- comment it (this part is for HKSARG bill, not using in merchant- WTT */			
+            TMP_ACT.merh_code as stub_type
+			from 
+			( 
+			 select a.activity_no, c.tran_no, 
+              d.bill_id, d.merh_code,
+			  '0' as bill_type, '' as sub_crc, 
+              a.post_date, a.off_code, 
+              a.ac_no, a.bill_seq, a.bill_amt, a.pay_amt, 
+              c.cre_dttm, 
+              p1.pay_method_code, 
+			  p2.amt, 
+              case when p2.amt<0 
+                then 0 
+				else decode(p1.pay_method_code, 'CA', 1, 'EP', 2, 'CHQ', 3, 'CO', 3, 'PIS', 3, 'TV', 3)
+              end as cc_piority 
+  			    from t_pay_bill a, t_sys_activity b,  t_sys_tran c, t_sys_pay p1, t_sys_pay_alloc p2, c_pay_bill_type d 
+				--from t_pay_bill@dlhipss a, t_sys_activity@dlhipss b,  t_sys_tran@dlhipss c, t_sys_pay@dlhipss p1, t_sys_pay_alloc@dlhipss p2, c_pay_bill_type d --for archived data
+				where a.activity_no = b.activity_no
+				and b.stat = 'A'
+				and b.tran_no = c.tran_no
+				and c.stat = 'C'
+				and c.tran_type = 'B'
+				and a.is_void <> 'Y'
+				and a.pay_amt > 0
+				and a.bill_id = d.bill_id
+				and a.post_date between trunc(d.eff_date) and trunc(d.exp_date)
+				and c.tran_no = p1.tran_no
+				and p1.stat = 'C'
+				and p1.pay_no = p2.pay_no
+				and p2.activity_no = a.activity_no
+				and ( d.merh_code <> '05' and d.merh_code <> '14' )
+				and a.post_date >= to_date('01-09-2018', 'dd-mm-yyyy')
+				and a.post_date < to_date('30-09-2018', 'dd-mm-yyyy') + 1
+				and p1.pay_amt <> 0
+				and b.serv_grp_code = 'PAY'
+				and a.off_code <> 'RVD'
+				and d.merh_code = 10
+/* comment it (this part is for HKSARG bill, not using in merchant- WTT
+				UNION
+			 select a.activity_no, c.tran_no,
+              d.bill_id, d.merh_code, d.bill_type,
+			  '' as sub_crc,
+              a.post_date, a.off_code,
+              a.ac_no, a.bill_seq, a.bill_amt, a.pay_amt,
+              c.cre_dttm,
+              p1.pay_method_code, p1.pay_amt,
+              case when p1.pay_amt<0
+                then 0
+                else decode(p1.pay_method_code, 'CA', 1, 'EP', 2, 'CHQ', 3, 'CO', 3, 'PIS', 3, 'TV', 3)
+              end as cc_piority
+				from t_pay_bill a, t_sys_activity b,  t_sys_tran c, t_sys_pay p1, c_pay_bill_type d
+				where a.activity_no = b.activity_no
+				and b.stat = 'A'
+				and b.tran_no = c.tran_no
+				and c.stat = 'C'
+				and c.tran_type = 'B'
+				and a.is_void <> 'Y'
+				and a.pay_amt > 0
+				and a.bill_id = d.bill_id
+				and a.post_date between trunc(d.eff_date) and trunc(d.exp_date)
+				and c.tran_no = p1.tran_no
+				and p1.stat = 'C'
+				and ( d.merh_code = '05' or d.merh_code = '14' )
+				and a.post_date >= to_date('01-09-2018', 'dd-mm-yyyy')
+				and a.post_date < to_date('30-09-2018', 'dd-mm-yyyy') + 1
+				and b.serv_grp_code = 'PAY'
+				and a.off_code <> 'RVD'
+-- comment it (this part is for HKSARG bill, not using in merchant- WTT */
+			)TMP_ACT
+		)IPSS_POOL
+where ( ( IPSS_POOL.cc_accumulateAmt>0  and IPSS_POOL.pay_method_code in ('CA', 'EP') ) or
+        ( IPSS_POOL.cc_accumulateAmt>=0 and IPSS_POOL.pay_method_code in ('CHQ', 'CO', 'PIS', 'TV') ) )
+group by IPSS_POOL.activity_no, IPSS_POOL.tran_no,
+         IPSS_POOL.merh_code, IPSS_POOL.off_code,
+         IPSS_POOL.bill_amt, IPSS_POOL.pay_amt, IPSS_POOL.stub_type,
+		 IPSS_POOL.post_date
+) TMP
+group by TMP.post_date, TMP.cc_offCode, TMP.stub_type
+) TMP_ALL
+group by TMP_ALL.stub_type,
+	   to_char(TMP_ALL.post_date, 'yyyy'),
+	   to_char(TMP_ALL.post_date, 'mm')
+order by 1,2,3
+;

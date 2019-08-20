@@ -1,0 +1,11 @@
+class Feed :
+    def __init__(self, title: str, title_detail: str, id: str, guidislink: str, link: str, summary: str, summary_detail: str, published: str, published_parsed: str):
+      self.title = title
+      self.title_detail = title_detail
+      self.id = id
+      self.guidislink = guidislink
+      self.link = link
+      self.summary = summary
+      self.summary_detail = summary_detail
+      self.published = published
+      self.published_parsed = published_parsed

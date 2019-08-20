@@ -1,0 +1,2 @@
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['C:\\workspace\\programs\\TextHelper', 'C:\\workspace\\programs\\TextHelper\\gen_script', 'C:\\workspace\\programs\\TextHelper\\gen_script\\schtasks', 'C:\\workspace\\programs\\TextHelper\\gen_script\\PTP_monthly_sql', 'C:\\workspace\\programs\\TextHelper\\gen_script\\counter_url_config', 'C:\\workspace\\programs\\TextHelper\\validate', 'C:\\workspace\\programs\\TextHelper\\gen_script\\update_reset_date', 'C:\\workspace\\programs\\TextHelper\\date', 'C:/workspace/programs/TextHelper'])

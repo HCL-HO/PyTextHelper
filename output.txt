@@ -1,0 +1,8 @@
+select p.off_code, o.location_id, to_char(o.cre_dttm, 'DD-MM-YYYY') as tran_date, o.pay_amt 
+from t_sys_pay p, t_sys_pay_oct o, c_sys_off_rollout ro 
+where o.pay_no=p.pay_no 
+and ro.off_code = p.off_code 
+and trunc(p.cre_dttm) between to_date('"+startDate+"', 'dd-mm-yyyy') and LAST_DAY(to_date('"+startDate+"','dd-mm-yyyy')) 
+and LAST_DAY(to_date('"+startDate+"','dd-mm-yyyy'))  >= trunc(ro.rollout_date) 
+and p.stat='C' 
+order by 1,2,3
