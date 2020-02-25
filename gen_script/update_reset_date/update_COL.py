@@ -10,7 +10,9 @@ def update_sql():
     result = ''
     for line in lines:
         if 'collDate' in line:
-            line = 'define collDate = \'' + datetime.strftime(get_next_working_date(datetime.today()),
+            # line = 'define collDate = \'' + datetime.strftime(get_next_working_date(datetime.today()),
+            #                                                   "%Y-%m-%d") + '\'' + '\n'
+            line = 'define collDate = \'' + datetime.strftime(datetime.today(),
                                                               "%Y-%m-%d") + '\'' + '\n'
         result += line
     write_output_to_file(result, path)
