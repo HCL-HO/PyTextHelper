@@ -1,8 +1,5 @@
-import importlib
 from common import *
 from datetime import *
-from calendar import *
-from dateU import get_next_working_date
 
 
 def update_sql():
@@ -11,7 +8,9 @@ def update_sql():
     result = ''
     for line in lines:
         if 'traningDate' in line:
-            line = 'define traningDate = \'' + datetime.strftime(get_next_working_date(datetime.today()),
+            # line = 'define traningDate = \'' + datetime.strftime(get_next_working_date(datetime.today()),
+            #                                                      "%Y-%m-%d") + '\'' + '\n'
+            line = 'define traningDate = \'' + datetime.strftime(datetime.today(),
                                                                  "%Y-%m-%d") + '\'' + '\n'
         result += line
     write_output_to_file(result, path)

@@ -1,0 +1,259 @@
+--********************* e-Cert (Server) Wildcard New Appl - 1-year Validity - Server Name*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'8265',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Wildcard New Appl - 1-year Validity - Server Name' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Wildcard New Appl - 1-year Validity - Server Name' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) Wildcard New Appl - 1-year Validity - Additional Server*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'475',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Wildcard New Appl - 1-year Validity - Additional Server' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Wildcard New Appl - 1-year Validity - Additional Server' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) Wildcard New Appl - 2-year Validity - Server Name*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'16530',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Wildcard New Appl - 2-year Validity - Server Name' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Wildcard New Appl - 2-year Validity - Server Name' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) Wildcard New Appl - 2-year Validity - Additional Server*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'950',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Wildcard New Appl - 2-year Validity - Additional Server' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Wildcard New Appl - 2-year Validity - Additional Server' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) Wildcard Renewal Appl - 1-year Validity - Server Name*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'8265',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Wildcard Renewal Appl - 1-year Validity - Server Name' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Wildcard Renewal Appl - 1-year Validity - Server Name' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) Wildcard Renewal Appl - 1-year Validity - Additional Server*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'475',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Wildcard Renewal Appl - 1-year Validity - Additional Server' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Wildcard Renewal Appl - 1-year Validity - Additional Server' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) Wildcard Renewal Appl - 2-year Validity - Server Name*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'16530',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Wildcard Renewal Appl - 2-year Validity - Server Name' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Wildcard Renewal Appl - 2-year Validity - Server Name' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) Wildcard Renewal Appl - 2-year Validity - Additional Server*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'950',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Wildcard Renewal Appl - 2-year Validity - Additional Server' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Wildcard Renewal Appl - 2-year Validity - Additional Server' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) New Appl - 1-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'2500',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) New Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) New Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) New Appl - 2-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'5000',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) New Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) New Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) Renewal Appl - 1-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'2500',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Renewal Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Renewal Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Server) Renewal Appl - 2-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'5000',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Server) Renewal Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Server) Renewal Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Encipher) New Appl - 1-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'24',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Encipher) New Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Encipher) New Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Encipher) New Appl - 2-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'48',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Encipher) New Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Encipher) New Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Encipher) New Appl - 3-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'72',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Encipher) New Appl - 3-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Encipher) New Appl - 3-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Encipher) New Appl - 4-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'96',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Encipher) New Appl - 4-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Encipher) New Appl - 4-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Encipher) Renewal Appl - 1-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'24',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Encipher) Renewal Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Encipher) Renewal Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Encipher) Renewal Appl - 2-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'48',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Encipher) Renewal Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Encipher) Renewal Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Encipher) Renewal Appl - 3-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'72',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Encipher) Renewal Appl - 3-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Encipher) Renewal Appl - 3-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Encipher) Renewal Appl - 4-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'96',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Encipher) Renewal Appl - 4-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Encipher) Renewal Appl - 4-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Org) Non-first-time - 1-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'150',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Org) Non-first-time - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Org) Non-first-time - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Org) Non-first-time - 2-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'300',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Org) Non-first-time - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Org) Non-first-time - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Org) First-time - 1-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'50',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Org) First-time - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Org) First-time - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Org) First-time - 2-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'200',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Org) First-time - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Org) First-time - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Org) Renewal Appl - 1-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'150',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Org) Renewal Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Org) Renewal Appl - 1-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+--********************* e-Cert (Org) Renewal Appl - 2-year Validity*********************
+
+ Insert into c_trd_ecert_pay_item_main
+(PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,EFF_DATE,EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,PROM_PRICE,ACTIVE,DISP_SEQ,CRE_DTTM,CRE_OFFR_CODE,LUPD_DTTM,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB)
+select PAY_CODE,PAY_DESC_E,PAY_DESC_C,PAY_DESC_S,TO_DATE('2019/12/17', 'yyyy/mm/dd'),EXP_DATE,APPL_TYPE,PAY_TYPE,CALC_USB_QTY,CALC_ADM_FEE,VALIDITY_VAL,PRICE,'300',ACTIVE,DISP_SEQ,sysdate,CRE_OFFR_CODE,sysdate,LUPD_OFFR_CODE,RPT_DISP_SEQ,CALC_TOKEN_QTY,AUTO_CALC_TOKEN,AUTO_CALC_USB
+from c_trd_ecert_pay_item_main where pay_desc_e = 'e-Cert (Org) Renewal Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;
+
+update c_trd_ecert_pay_item_main set exp_date = TO_DATE('2019/12/17', 'yyyy/mm/dd')
+where pay_desc_e = 'e-Cert (Org) Renewal Appl - 2-year Validity' and trunc(sysdate) between eff_date and exp_date;

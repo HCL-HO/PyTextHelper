@@ -9,3 +9,7 @@ class Feed :
       self.summary_detail = summary_detail
       self.published = published
       self.published_parsed = published_parsed
+
+
+def get_feed(params) -> Feed:
+    return Feed(params['title'], params['title_detail'], params['id'], params['guidislink'], params['link'], params['summary'], params['summary_detail'], params['published'], params['published_parsed'])
