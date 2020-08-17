@@ -1,0 +1,15 @@
+    {
+"userId":"GPODO001",
+"expenseDate":"2019-02-08",
+"seq":"1",
+"offCode":"GPO/DO",
+"teamCode":"EC14",
+"beat":"EC14",
+"transportType":"MTR",
+"expense":"6",
+"beatExcptReason":"",
+"routeExcptReason":"",
+"exceptOffCode":"",
+"dutyFlag" :"Y",
+"userName" :"Chan Tai Man"
+    }

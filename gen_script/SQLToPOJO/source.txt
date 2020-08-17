@@ -1,0 +1,2 @@
+"select cdrer.CODE, cdrer.DESC_C, cdrer.DESC_E, cdrer.DESC_S, TO_CHAR(cdrer.EFF_DATE, 'YYYY-MM-DD') as EFF_DATE, TO_CHAR(cdrer.EXP_DATE, 'YYYY-MM-DD') as EXP_DATE
+ from C_DIS_ROUTE_EXCPT_REASON cdrer;"
