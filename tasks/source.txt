@@ -1,0 +1,4 @@
+
+  <string name="in_house">In-house</string>
+  <string name="pmsmc">PMSMC</string>
+  <string name="non_pmsmc">Non-PMSMC</string>

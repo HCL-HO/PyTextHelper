@@ -1,6 +1,6 @@
 from typing import List
 
-import pyperclip
+# import pyperclip
 
 
 def get_text_from_file(path) -> List[str]:
