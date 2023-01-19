@@ -26,3 +26,7 @@ def write_output_to_file(result, file):
 
 def load_array_from_file(file, deliminator) -> List[str]:
     return get_text_from_file_in_str(file).split(deliminator)
+
+
+def to_quoted_str(txt):
+    return "\"" + txt + "\""
