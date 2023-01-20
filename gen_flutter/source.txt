@@ -1,55 +1,80 @@
-AEL Airport Express
-HOK Hong Kong
-KOW Kowloon
-TSY Tsing Yi
-AIR Airport
-AWE AsiaWorld Expo
--
-TCL Tung Chung Line
-HOK Hong Kong
-KOW Kowloon
-OLY Olympic
-NAC Nam Cheong
-LAK Lai King
-TSY Tsing Yi
-SUN Sunny Bay
-TUC Tung Chung
--
-TML Tuen Ma Line
-WKS Wu Kai Sha
-MOS Ma On Shan
-HEO Heng On
-TSH Tai Shui Hang
-SHM Shek Mun
-CIO City One
-STW Sha Tin Wai
-CKT Che Kung Temple
-TAW Tai Wai
-HIK Hin Keng
-DIH Diamond Hill
-KAT Kai Tak
-SUW Sung Wong Toi
-TKW To Kwa Wan
-HOM Ho Man Tin
-HUH Hung Hom
-ETS East Tsim Sha Tsui
-AUS Austin
-NAC Nam Cheong
-MEF Mei Foo
-TWW Tsuen Wan West
-KSR Kam Sheung Road
-YUL Yuen Long
-LOP Long Ping
-TIS Tin Shui Wai
-SIH Siu Hong
-TUM Tuen Mun
--
-TKL Tseung Kwan O Line
-NOP North Point
-QUB Quarry Bay
-YAT Yau Tong
-TIK Tiu Keng Leng
-TKO Tseung Kwan O
-LHP LOHAS Park
-HAH Hang Hau
-POA Po Lam
+status Numbers
+system status code
+value:
+"1" = normal
+“0” = error or alert
+message Strings Alert message
+url (optional) Strings URL for Special Train Services
+Arrangement case.
+curr_time
+Strings, 19 digits alphanumeric in the
+format of "yyyy-MM-dd HH:mm:ss" Current date and time
+sys_time Strings System date and time
+Isdelay (optional) Strings
+Indicate if the train is delayed.
+Value:
+"Y" = train is delayed
+“N” = train is running on time
+The below describes the key information within the data array format.
+UP/DOWN Array format
+Indicate the destinations of the
+train in the specific line.
+AEL (Airport Express)
+UP: AIR (Airport) /
+ AWE (AsiaWorld Expo)
+DOWN: HOK (Hong Kong)
+TCL (Tung Chung Line)
+UP: TUC (Tung Chung)
+DOWN: HOK (Hong Kong)
+TML (Tuen Ma Line)
+UP: TUM (Tuen Mun)
+DOWN: WKS (Wu Kai Sha)
+TKL (Tseung Kwan O Line)
+UP: POA (Po Lam) /
+ LHP (LOHAS Park)
+DOWN: TIK (Tiu Keng Leng) /
+ NOP (North Point)
+EAL (East Rail Line)
+UP: LMC (Lok Ma Chau) /
+ LOW (Lo Wu) /
+ SHS (Sheung Shui) /
+ TAP (Tai Po Market) /
+ RAC (Racecourse) /
+ FOT (Fo Tan) /
+ SHT (Sha Tin)
+DOWN: ADM (Admiralty) /
+ HUH (Hung Hom) /
+ MKK (Mong Kok East)
+ttnt Dummy N/A
+valid Dummy N/A
+plat Numbers Platform numbers for the departure
+/ arrival train
+time
+Strings, 19 digits alphanumeric in the
+format of "yyyy-MM-dd HH:mm:ss" Estimated arrival time (or
+departure time) of the train
+Data Dictionary of Next Train API (version 1.2)
+7
+Name of JSON data Data Type Description
+source Dummy N/A
+dest Strings, 3 characters MTR Station Code in capital letters
+seq Numbers
+The sequence of the 4 upcoming
+trains.
+Value:
+1,2,3,4
+timetype (optional) Strings, 1 character
+Special field apply for EAL only.
+Indicate the train is arrive or depart
+from the station.
+Value:
+“A” = Arrival
+“D” = Departure
+route (optional) Strings
+Special field apply for EAL only.
+Indicate the train to destination via
+Racecourse station instead of Fo
+Tan station.
+Value:
+“” = Normal
+“RAC” = Via Racecourse station
