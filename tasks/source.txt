@@ -1,4 +1,6 @@
-
-  <string name="in_house">In-house</string>
-  <string name="pmsmc">PMSMC</string>
-  <string name="non_pmsmc">Non-PMSMC</string>
+    <string name="job_teco_status_not_ready">未可TECO</string>
+    <string name="job_teco_status_ready">可TECO</string>
+    <string name="job_teco_status_pending_teco">已提交TECO請求</string>
+    <string name="job_teco_status_pending_unteco">正等待批准un-TECO</string>
+    <string name="job_teco_status_success">已完成</string>
+    <string name="job_teco_status_failed">已失敗</string>

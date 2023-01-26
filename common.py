@@ -1,4 +1,6 @@
 from typing import List
+import re
+
 
 # import pyperclip
 
@@ -30,3 +32,14 @@ def load_array_from_file(file, deliminator) -> List[str]:
 
 def to_quoted_str(txt):
     return "\"" + txt + "\""
+
+
+def find_between(s, first, last):
+    try:
+        start = s.index(first) + len(first)
+        end = s.index(last, start)
+        return s[start:end]
+    except ValueError:
+        return ""
+
+    return re.sub(r'(?!^)_([a-zA-Z])', lambda m: m.group(1).upper(), s)
