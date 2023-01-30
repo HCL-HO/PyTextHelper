@@ -42,4 +42,6 @@ def find_between(s, first, last):
     except ValueError:
         return ""
 
+
+def underscore_to_camelcase(s):
     return re.sub(r'(?!^)_([a-zA-Z])', lambda m: m.group(1).upper(), s)

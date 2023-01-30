@@ -1,5 +1,4 @@
 import common as Common
-import re
 
 lines = Common.load_array_from_file('source.txt', '\n')
 

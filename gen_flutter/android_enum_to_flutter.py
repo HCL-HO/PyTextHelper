@@ -54,7 +54,7 @@ def gen_flutter_enum(txt, className):
     return output + "}"
 
 
-source = get_text_from_file_in_str('source.txt')
+source = get_text_from_file_in_str('../tasks/source.txt')
 className = get_class_name(source)
 enumMap = get_enums_pairs(source)
 print(gen_flutter_enum(enumMap, className))
