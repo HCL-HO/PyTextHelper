@@ -1,2 +1,13 @@
-    <string name="sn_status_pending_associate">等待批准連結</string>
-    <string name="sn_status_pending_cancel">等待批准取消</string>
+data class UpdateSnRequest(
+        val snNumber: String,
+        val version: Int,
+        val contactPerson: String,
+        val contactNumber: List<String>,
+        val email: String,
+        val locationDetail: String,
+        val faultDetail: String,
+        val remarks: List<SnRemark>,
+        var fehdVenue: String?,
+        val resendNotification: Boolean = false,
+        var eamData: EAMData? = null
+)

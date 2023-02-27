@@ -1,0 +1,5 @@
+jobCardNumber	String	Y
+version	Number	Y
+jobDescription	String	Y
+startTime	Date	N
+completionTime	Date	N
