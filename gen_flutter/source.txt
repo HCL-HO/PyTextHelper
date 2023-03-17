@@ -1,13 +1,31 @@
-data class UpdateSnRequest(
-        val snNumber: String,
-        val version: Int,
-        val contactPerson: String,
-        val contactNumber: List<String>,
-        val email: String,
-        val locationDetail: String,
-        val faultDetail: String,
-        val remarks: List<SnRemark>,
-        var fehdVenue: String?,
-        val resendNotification: Boolean = false,
-        var eamData: EAMData? = null
-)
+    enum class JobCompleteReason(
+        val value: Int,
+        val isEam: Boolean,
+        val isEamFinalReply: Boolean?,
+        val shouldCreateFollowUp: Boolean,
+        val maintenanceType: SnEnum.MaintenanceType,
+        private val resID: Int
+    ) {
+        CODE_3200(            3200,            false,            null,            false,            SnEnum.MaintenanceType.CM,            R.string.job_complete_reason_3200        ),
+        CODE_3210(            3210,            false,           null,            false,            SnEnum.MaintenanceType.CM,            R.string.job_complete_reason_3210        ),
+        CODE_3220(            3220,            false,            null,            true,            SnEnum.MaintenanceType.CM,            R.string.job_complete_reason_3220        ),
+        CODE_3230(            3230,            false,            null,            false,            SnEnum.MaintenanceType.CM,            R.string.job_complete_reason_3230        ),
+        CODE_3240(            3240,            false,            null,            false,            SnEnum.MaintenanceType.CM,            R.string.job_complete_reason_3240        ),
+        CODE_3250(            3250,            true,            true,            false,            SnEnum.MaintenanceType.CM,            R.string.reason_job_card_cm_complete_3250        ),
+        CODE_3251(            3251,            true,            true,            false,            SnEnum.MaintenanceType.CM,            R.string.reason_job_card_cm_complete_3251        ),
+        CODE_3252(            3252,            true,            true,            false,            SnEnum.MaintenanceType.CM,            R.string.reason_job_card_cm_complete_3252        ),
+        CODE_3253(            3253,            true,            true,            false,            SnEnum.MaintenanceType.CM,            R.string.reason_job_card_cm_complete_3253        ),
+        CODE_3254(            3254,            true,            true,            false,            SnEnum.MaintenanceType.CM,            R.string.reason_job_card_cm_complete_3254        ),
+        CODE_3255(            3255,            true,            false,            true,            SnEnum.MaintenanceType.CM,            R.string.reason_job_card_cm_complete_3255        ),
+        CODE_3256(            3256,            true,            false,            true,            SnEnum.MaintenanceType.CM,            R.string.reason_job_card_cm_complete_3256        ),
+        CODE_3257(            3257,            true,            false,            true,            SnEnum.MaintenanceType.CM,            R.string.reason_job_card_cm_complete_3257        ),
+        CODE_3270(            3270,            true,            true,            false,            SnEnum.MaintenanceType.PM,            R.string.reason_job_card_pm_complete_3270        ),
+        CODE_3271(            3271,            true,            true,            false,            SnEnum.MaintenanceType.PM,            R.string.reason_job_card_pm_complete_3271        ),
+        CODE_3272(            3272,            true,            true,            false,            SnEnum.MaintenanceType.PM,            R.string.reason_job_card_pm_complete_3272        ),
+        CODE_3273(            3273,            true,            true,            false,            SnEnum.MaintenanceType.PM,            R.string.reason_job_card_pm_complete_3273        ),
+        CODE_3274(            3274,            true,            true,            false,            SnEnum.MaintenanceType.PM,            R.string.reason_job_card_pm_complete_3274        ),
+        CODE_3275(            3275,            true,            true,            false,            SnEnum.MaintenanceType.PM,            R.string.reason_job_card_pm_complete_3275        ),
+        CODE_3276(            3276,            true,            true,            true,            SnEnum.MaintenanceType.PM,            R.string.reason_job_card_pm_complete_3276        ),
+        CODE_3277(            3277,            true,            true,            true,            SnEnum.MaintenanceType.PM,            R.string.reason_job_card_pm_complete_3277        ),
+        CODE_3278(            3278,            true,            true,            true,            SnEnum.MaintenanceType.PM,            R.string.reason_job_card_pm_complete_3278        );
+    }
