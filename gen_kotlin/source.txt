@@ -1,5 +1,7 @@
-jobCardNumber	String	Y
-version	Number	Y
-jobDescription	String	Y
-startTime	Date	N
-completionTime	Date	N
+expression	String	Y	
+filter	Object	N	wildcard search of other fields
+parameters	[String]	N	specified fields to be included, if empty, all fields would be included
+pageNumber	Number	N	if not provide, default 1 (starting page)
+pageSize	Number	N	from 1 to 100, if not provided, default 10
+sortBy	String	N	default createdAt
+sortOrder	Number	N	default -1
