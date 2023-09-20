@@ -9,18 +9,23 @@ def replace_with_dart_type(data_type):
     return {
         "Int": "int",
         'Boolean': 'bool',
-    }.get(data_type, data_type)
+        "Int?": "int",
+        'Boolean?': 'bool',
+    }.get(data_type.lstrip().rstrip(), data_type)
 
 
 def get_kotlin_data_class_dict(source):
     fields = C.find_between(source, "(", ")").lstrip().rstrip().split("\n")
     fields = [a.lstrip().rstrip() for a in fields]
     result = {}
+    print(fields)
     for field in fields:
+        print(field)
         field_name = C.find_between(field, " ", ":")
-        data_type = C.find_between(field, ": ", ",")
+        data_type = C.find_between(field, ": ", "=") if field.find("=") >= 0 else C.find_between(field, ": ", ",")
         data_type = replace_with_dart_type(data_type)
         result[field_name] = data_type
+    print(result)
     return result
 
 
@@ -28,8 +33,9 @@ def gen_dto_w_keys(name: str, fields_dict: dict):
     temp = "@freezed\nclass $name with _$$name {  const factory $name({ $temp }) = _$name; \n" \
            "factory $name.fromJson(Map<String, Object?> json) => _$$nameFromJson(json);}"
     content = ''
+    print(fields_dict)
     for k in fields_dict.keys():
-        content += fields_dict[k] + "? " + k + ",\n"
+        content += fields_dict[k] + "? " +k + ",\n"
 
     temp = temp.replace('$name', name)
     temp = temp.replace("$temp", content)

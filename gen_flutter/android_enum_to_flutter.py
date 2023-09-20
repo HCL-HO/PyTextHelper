@@ -2,19 +2,6 @@ from common import *
 
 import regex
 
-
-# String? get
-# name
-# {
-#     switch(this)
-# {
-#     case
-# EquipmentOwner.HA:
-# return "HA";
-# }
-# }
-
-
 def get_class_name(txt):
     return find_between(txt, 'class', '(').lstrip().rstrip()
 
@@ -51,7 +38,6 @@ def get_general_enums_pairs(txt):
             values = s.split(",")
             fields = []
             for idx, x in enumerate(values):
-                # print(x)
                 if x != "":
                     x = x.lstrip().rstrip()
                     fields.append(
@@ -115,6 +101,14 @@ def gen_flutter_general_enum_extensions(map, fieldNames, className):
     return output + "}\n"
 
 
+def gen_flutter_enum2(map, class_name):
+    enum = 'enum ' + class_name + "{"
+    for k in map:
+        enum += k + ",\n"
+    enum += "}"
+    return enum
+
+
 def gen_flutter_val_enum_extension(txt, className):
     output = "extension " + className + "Extension on " + className + "{\n" \
              + "  String? get rawValue {\n" + "    switch (this) {\n"
@@ -146,8 +140,9 @@ def gen_multifields_enum(source):
     className = get_class_name(source)
     genEnumMap = get_general_enums_pairs(source)
     fields = get_enum_fields_name(source)
-    print(fields)
+    # print(fields)
     print(genEnumMap)
+    print(gen_flutter_enum2(genEnumMap, className))
     print(gen_flutter_general_enum_extensions(genEnumMap, fields, className))
 
 

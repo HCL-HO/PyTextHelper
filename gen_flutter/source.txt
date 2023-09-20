@@ -1,4 +1,0 @@
-jobCardNumber	String	Y	
-version	Number	Y	
-cancelCode	Number	Y	3301, 3302 or 3303, meaning duplicated job, wrong equipment and wrong location respectively
-cancelRemarks	String	N	
